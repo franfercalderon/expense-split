@@ -1,18 +1,23 @@
-import Dashboard from '../components/Dashboard/Dashboard'
-import Login from '../components/Login/Login'
 import { useContext } from 'react'
-import {AppContext} from '../context/AppContext'
-
-
+import { AppContext } from '../context/AppContext'
+import TopBar from '../components/TopBar/TopBar'
+import LoginForm from '../components/LoginForm/LoginForm'
+import HomeContainer from '../components/HomeContainer/HomeContainer' 
 
 export default function Home () {
 
     //CONTEXT
     const {appUser} = useContext(AppContext)
-    console.log(appUser)
     return(
         <>
-            <Login/>
+        {appUser?
+            <>
+                <TopBar/>
+                <HomeContainer/>
+            </>
+        :
+            <LoginForm/>
+        }
         </>
     )
 }
