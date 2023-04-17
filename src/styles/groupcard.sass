@@ -1,0 +1,43 @@
+.group-card-container   
+    min-height: 110px
+    height: 110px
+    width: 100%
+    margin-bottom: 13px
+    background-color: $green1
+    display: flex
+    justify-content: space-between
+    padding: 22px 18px
+
+.group-card-container:hover
+    cursor: pointer
+    transform: scale(1.009)
+
+.group-card-info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+
+.group-card-info p 
+    margin: 0
+
+.group-card-arrow
+    display: flex
+    align-items: center
+    font-size: 1.5rem
+    margin-right: 8px
+
+@media (min-width: 769px)
+    .group-card-container   
+        min-height: 150px
+        width: 45%
+        margin-bottom: 25px
+        padding: 25px
+
+    .group-card-info
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        
+    .group-card-container:hover
+        transform: scale(1.009)

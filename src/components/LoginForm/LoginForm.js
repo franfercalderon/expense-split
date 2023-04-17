@@ -10,12 +10,6 @@ import { AppContext } from '../../context/AppContext'
 
 export default function LoginForm () {
 
-    //FIREBASE
-    // const auth = getAuth(app)
-
-    //Initalize Firestore
-    // const db = getFirestore(app) 
-
     //ROUTER
     const navigate = useNavigate()
 
@@ -63,7 +57,7 @@ export default function LoginForm () {
         } else{
             try{
                 await createUser(email, password)
-                navigate('/home')
+                navigate('/newuser')
 
             }catch(err){
 
@@ -82,16 +76,7 @@ export default function LoginForm () {
                 })
             }
         }
-        
-        
-
     }
-
-    
-
-
-    
-
 
     return(
         <>
@@ -102,17 +87,8 @@ export default function LoginForm () {
                 <>
                 <h2>ExpenSplit</h2>
                 <div className='form-container rounded-container'>
-                    <h3>Welcome</h3>
+                    <h3>{isLogging? 'Welcome back!': 'Welcome!'}</h3>
                     <form className='w-100 d-flex flex-column align-items-center' onSubmit={submitHandler}>
-                        <div className='d-flex flex-column login-group m-2'>
-                            {/* {!isLogging && 
-                            
-                            <label className='d-flex flex-column '>
-                                Username
-                                <input type='text' id='username' className='mt-2 rounded-input'placeholder='Benjamin' onChange={(e)=>{set}}/>
-                            </label>
-                            } */}
-                        </div>
                         <div className='d-flex flex-column login-group m-2'>
                             <label className='d-flex flex-column '>
                                 Email

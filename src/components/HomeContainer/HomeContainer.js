@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlus} from '@fortawesome/free-solid-svg-icons'
-
+import GroupCard from "../GroupCard/GroupCard"
+import {Link} from 'react-router-dom'
 
 export default function HomeContainer () {
 
@@ -12,7 +13,26 @@ export default function HomeContainer () {
 
     return(
         <div className="home-container">
-            {expenseGroups.length>1?
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            <GroupCard/>
+            {/* {expenseGroups.length>1?
                 <>
                 {expenseGroups.map((group, idx)=>{
                     return(
@@ -24,10 +44,12 @@ export default function HomeContainer () {
             <div>
                 <p>There are no exp</p>
             </div>
-            }
-            <div className="add-btn home-add-btn">
-                <FontAwesomeIcon icon={faPlus}/>
-            </div>
+            } */}
+            <Link to={'/newgroup'}>
+                <div className="add-btn home-add-btn">
+                    <FontAwesomeIcon icon={faPlus}/>
+                </div>
+            </Link>
 
         </div>
     )

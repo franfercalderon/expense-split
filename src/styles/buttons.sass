@@ -3,6 +3,10 @@
 
 .logout-btn
     font-size: 1.3rem
+    cursor: pointer
+
+.logout-btn:hover
+    transform: scale(1.05)
 
 .add-btn
     height: 60px
@@ -21,4 +25,23 @@
     margin: 28px
     right: 0
     bottom: 0
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.37)
 
+.home-add-btn:hover
+    cursor: pointer
+    transform: scale(1.1)
+    box-shadow: 0px 0px 10px 7px rgba(85, 85, 85, 0.37)
+
+.add-participant-btn
+    height: 2rem
+    width: 2rem
+    border-radius: 50%
+    background-color: $green2
+    margin-left: 10px
+    color: white
+    border: none
+    font-size: 1rem
+
+@media (min-width: 769px)
+    .logout-btn
+        font-size: 1.5rem
