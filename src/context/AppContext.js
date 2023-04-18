@@ -34,6 +34,17 @@ const AppProvider = ({children}) => {
         signOut(auth)
     }
 
+    const capitalizeWords = (string) =>{
+        return(
+            string
+                .toLowerCase()
+                .split(' ')
+                .map((word)=>word.charAt(0).toUpperCase()+word.slice(1))
+                .join(' ')
+        )
+    }
+
+
     useEffect(()=>{
 
         //Firebase auth listener
@@ -54,7 +65,8 @@ const AppProvider = ({children}) => {
             appUser,
             logOut,
             userLogin,
-            createUser
+            createUser,
+            capitalizeWords
         }}>
             {children}
         </Provider>

@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCheck} from '@fortawesome/free-solid-svg-icons'
-// import {doc, setDoc} from 'firebase/firestore'
 import { useNavigate } from "react-router-dom"
 import { getAuth , updateProfile} from "firebase/auth"
 import Swal from "sweetalert2"
@@ -18,7 +17,6 @@ export default function CreateUsername () {
     //STATES
     const [username, setUsername] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
-    // const [validUsername, setValidUsername] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -63,7 +61,6 @@ export default function CreateUsername () {
             })
     }
 
-    // const handleInput
     return(
         <>{isLoading?
         <Loader/>
@@ -89,7 +86,7 @@ export default function CreateUsername () {
                 <button type= "submit" className="btn btn-light">Save Username</button>
                 }
             </form>
-            <p>{username && username.length < 3 &&
+            <p className="warning-tag">{username && username.length < 3 &&
                 'Username must have at least 3 characters'
             }</p>
 

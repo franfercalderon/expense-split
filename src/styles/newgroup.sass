@@ -7,10 +7,10 @@
     align-items: center
     padding: 0 35px
 
-.new-group-container h2 
-    font-size: 1.3rem
-    color: $background
-    margin: 15px 0
+// .new-group-container h2 
+//     font-size: 1.3rem
+//     color: $background
+//     margin: 25px 0
 
 .new-group-container h3
     font-size: 1.1rem
@@ -36,7 +36,23 @@
 .new-group-input::placeholder
     color: $green2
 
-.participant-name-div
+.participant-name-ul
     width: 100%
+    padding: 0
     display: flex
+    flex-direction: column
     justify-content: space-between
+    list-style: none
+
+.participant-name-ul p 
+    margin: 10px 0
+    color: $green1
+
+li:first-child
+    opacity: 0.7
+    font-style: italic
+
+.new-group-container .warning-tag
+    margin-top: 0
+    align-self: start
+    

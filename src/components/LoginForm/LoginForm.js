@@ -1,12 +1,8 @@
 import {useState, useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
-// import app from '../../firebase/fb'
-// import {getFirestore, doc, setDoc} from 'firebase/firestore'
-// import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth'
 import Swal from 'sweetalert2'
 import Loader from '../Loader/Loader'
 import { AppContext } from '../../context/AppContext'
-// import 
 
 export default function LoginForm () {
 
